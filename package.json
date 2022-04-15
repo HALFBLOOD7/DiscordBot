@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./src/bot.js",
-    "dev": "nodemon ./src/bot.js"
-  },
+  "start": "webpack-dev-server --mode development --hot --open --port $PORT",
+  "build": "npm i -dev && webpack --mode production",
+  "heroku-postbuild": "npm build"
+},
   "author": "halfblood",
   "license": "ISC",
   "dependencies": {
